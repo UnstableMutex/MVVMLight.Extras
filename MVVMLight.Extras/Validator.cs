@@ -11,10 +11,12 @@ namespace MVVMLight.Extras
         {
             _message = message;
         }
+
         public string Message
         {
             get { return _message; }
         }
+
         public abstract bool Validate(object value);
     }
 }

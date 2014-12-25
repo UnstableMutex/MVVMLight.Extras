@@ -5,11 +5,11 @@ using System.Windows.Input;
 namespace MVVMLight.Extras
 {
     /// <summary>
-    /// A command whose sole purpose is to 
-    /// relay its functionality to other
-    /// objects by invoking delegates. The
-    /// default return value for the CanExecute
-    /// method is 'true'.
+    ///     A command whose sole purpose is to
+    ///     relay its functionality to other
+    ///     objects by invoking delegates. The
+    ///     default return value for the CanExecute
+    ///     method is 'true'.
     /// </summary>
     public class NoWeakRelayCommand<T> : ICommand
     {
@@ -21,7 +21,7 @@ namespace MVVMLight.Extras
         }
 
         /// <summary>
-        /// Creates a new command.
+        ///     Creates a new command.
         /// </summary>
         /// <param name="execute">The execution logic.</param>
         /// <param name="canExecute">The execution status logic.</param>
@@ -41,7 +41,7 @@ namespace MVVMLight.Extras
         [DebuggerStepThrough]
         public bool CanExecute(object parameter)
         {
-            return _canExecute == null || _canExecute((T)parameter);
+            return _canExecute == null || _canExecute((T) parameter);
         }
 
         public event EventHandler CanExecuteChanged
@@ -60,31 +60,32 @@ namespace MVVMLight.Extras
 
         public void Execute(object parameter)
         {
-            _execute((T)parameter);
+            _execute((T) parameter);
         }
 
         #endregion // ICommand Members
 
         #region Fields
 
-        readonly Action<T> _execute;
-        readonly Predicate<T> _canExecute;
+        private readonly Predicate<T> _canExecute;
+        private readonly Action<T> _execute;
 
         #endregion // Fields
     }
+
     /// <summary>
-    /// A command whose sole purpose is to 
-    /// relay its functionality to other
-    /// objects by invoking delegates. The
-    /// default return value for the CanExecute
-    /// method is 'true'.
+    ///     A command whose sole purpose is to
+    ///     relay its functionality to other
+    ///     objects by invoking delegates. The
+    ///     default return value for the CanExecute
+    ///     method is 'true'.
     /// </summary>
     public class NoWeakRelayCommand : ICommand
     {
         #region Constructors
 
         /// <summary>
-        /// Creates a new command that can always execute.
+        ///     Creates a new command that can always execute.
         /// </summary>
         /// <param name="execute">The execution logic.</param>
         public NoWeakRelayCommand(Action execute)
@@ -93,7 +94,7 @@ namespace MVVMLight.Extras
         }
 
         /// <summary>
-        /// Creates a new command.
+        ///     Creates a new command.
         /// </summary>
         /// <param name="execute">The execution logic.</param>
         /// <param name="canExecute">The execution status logic.</param>
@@ -139,8 +140,8 @@ namespace MVVMLight.Extras
 
         #region Fields
 
-        readonly Action _execute;
-        readonly Func<bool> _canExecute;
+        private readonly Func<bool> _canExecute;
+        private readonly Action _execute;
 
         #endregion // Fields
     }

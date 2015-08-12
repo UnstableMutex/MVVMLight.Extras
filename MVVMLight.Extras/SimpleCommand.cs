@@ -1,4 +1,4 @@
-  class SimpleCommand : ICommand
+public  class SimpleCommand : ICommand
     {
         private readonly Action _execute;
         private readonly Func<bool> _canexecute;

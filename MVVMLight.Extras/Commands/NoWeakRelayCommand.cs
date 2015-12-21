@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Input;
 
-namespace MVVMLight.Extras
+namespace MVVMLight.Extras.Commands
 {
     /// <summary>
     ///     A command whose sole purpose is to

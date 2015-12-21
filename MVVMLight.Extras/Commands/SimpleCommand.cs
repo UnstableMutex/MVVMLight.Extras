@@ -1,4 +1,9 @@
-public  class SimpleCommand : ICommand
+using System;
+using System.Windows.Input;
+
+namespace MVVMLight.Extras.Commands
+{
+    public  class SimpleCommand : ICommand
     {
         private readonly Action _execute;
         private readonly Func<bool> _canexecute;
@@ -32,3 +37,4 @@ public  class SimpleCommand : ICommand
                 CanExecuteChanged(this, EventArgs.Empty);
         }
     }
+}

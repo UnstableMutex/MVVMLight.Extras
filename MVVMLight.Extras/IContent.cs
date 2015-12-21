@@ -1,4 +1,7 @@
-    public interface IContent
+    namespace MVVMLight.Extras
     {
-        object Content { get; set; }
+        public interface IContent
+        {
+            object Content { get; set; }
+        }
     }

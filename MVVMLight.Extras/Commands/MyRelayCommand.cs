@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.Windows.Input;
 
-namespace MVVMLight.Extras
+namespace MVVMLight.Extras.Commands
 {
     public class MyRelayCommand : ICommand
     {
